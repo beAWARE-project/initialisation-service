@@ -1,0 +1,36 @@
+{
+	"polygon": {
+		"polygonID": "Zone_1",
+		"vertices": [
+			{
+				"latitude": 39.397225,
+				"longitude": -0.35026199999999996
+			},
+			{
+				"latitude": 39.402083999999995,
+				"longitude": -0.328302
+			},
+			{
+				"latitude": 39.375406,
+				"longitude": -0.318364
+			},
+			{
+				"latitude": 39.370487,
+				"longitude": -0.33932599999999996
+			},
+			{
+				"latitude": 39.397225,
+				"longitude": -0.35026199999999996
+			}
+		],
+		"properties": {
+			"label": "New polygon",
+			"color": ""
+		}
+	},
+ 	"center": {
+ 		"latitude": 39.381774,
+ 		"longitude": -0.32561399999999996
+ 	},
+ 	"Name": "Casa Forestal El Saler"
+ }

@@ -1,0 +1,41 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: initialisation-service
+  name: initialisation-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: initialisation-service
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  revisionHistoryLimit: 5
+  template:
+    metadata:
+      labels:
+        app: initialisation-service
+    spec:
+      containers:
+      - image: beaware/initialisation-service:IMAGE_TAG
+        imagePullPolicy: Always
+        name: initialisation-service
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        env:
+          - name: SECRET_MH_API_KEY
+            valueFrom:
+             secretKeyRef:
+              name: mh-secret2
+              key: api_key
+          - name: SECRET_MH_BROKERS
+            valueFrom:
+             secretKeyRef:
+              name: mh-secret2
+              key: kafka_brokers_sasl

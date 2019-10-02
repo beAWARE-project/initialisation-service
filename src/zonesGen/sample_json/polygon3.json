@@ -1,0 +1,36 @@
+{
+	"polygon": {
+	"polygonID": "Zone_3",
+	"vertices": [
+		{
+			"latitude": 39.347099,
+			"longitude": -0.32986699999999997
+		},
+		{
+			"latitude": 39.351771,
+			"longitude": -0.309324
+		},
+				{
+			"latitude": 39.328469,
+			"longitude": -0.29831399999999997
+			},
+		{
+			"latitude": 39.323187999999995,
+			"longitude":  -0.31939799999999996
+		},
+		{
+			"latitude": 39.347099,
+			"longitude": -0.32986699999999997
+			}
+],
+		"properties": {
+			"label": "New polygon",
+			"color": ""
+		}
+	},
+	"center": {
+		"latitude": 39.339149,
+		"longitude":   -0.319721
+	},
+	"Name": "Centro de Interpretacion Raco de L'Olla - Parque Natural de l'Albufera - GVA"
+}

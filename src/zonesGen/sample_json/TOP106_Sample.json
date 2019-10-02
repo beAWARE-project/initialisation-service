@@ -1,0 +1,33 @@
+{
+	"header": {
+		"topicName": "TOP106_RISK_MAPS",
+		"topicMajorVersion": "0",
+		"topicMinorVersion": "1",
+		"sender": "CRCL",
+		"msgIdentifier": "",
+		"sentUTC": "",
+		"status": "Actual",
+		"actionType": "Update",
+		"specificSender": "",
+		"scope": "Public",
+		"district": "Valencia",
+		"recipients": "",
+		"code": 1,
+		"note": "My notes",
+		"references": "My references"
+	},
+	"body": {
+		"dataStreamGenerator": "ZNCR",
+		"dataStreamID": "FLCR_1050_Polygons_Zones",
+		"dataStreamName": "POLYG_ZONES",
+		"dataStreamDescription": "Polygons for Zones1-4",
+		"language": "en-US",
+		"dataStreamCategory": "Met",
+		"dataStreamSubCategory": "Fire",
+		"position": {
+			"longitude": -0.33039,
+			"latitude": 39.35383
+		},
+		"polygons": []
+	}
+}

@@ -1,0 +1,36 @@
+{
+	"polygon": {
+	"polygonID": "Zone_4",
+	"vertices": [
+		{
+			"latitude": 39.323187999999995,
+			"longitude":  -0.31939799999999996
+		},
+		{
+			"latitude": 39.328469,
+			"longitude": -0.29831399999999997
+		},
+				{
+			"latitude": 39.307162999999996,
+			"longitude": -0.286512
+		},
+		{
+			"latitude": 39.29952,
+             "longitude":   -0.30924999999999997
+		},
+	{
+			"latitude": 39.323187999999995,
+			"longitude":  -0.31939799999999996
+		}
+],
+		"properties": {
+			"label": "New polygon",
+			"color": ""
+		}
+	},
+	"center": {
+		"latitude": 39.320756,
+		"longitude":   -0.301906
+	},
+	"Name": "Parador de El Saler"
+}

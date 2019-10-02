@@ -1,0 +1,36 @@
+{
+	"polygon": {
+		"polygonID": "Zone_2",
+		"vertices": [
+			{
+				"latitude": 39.370487,
+				"longitude": -0.33932599999999996
+			},
+			{
+				"latitude": 39.375406,
+				"longitude": -0.318364
+			},
+						{
+				"latitude": 39.351771,
+				"longitude": -0.309324
+			},
+			{
+				"latitude": 39.347099,
+				"longitude": -0.32986699999999997
+			},
+			{
+				"latitude": 39.370487,
+				"longitude": -0.33932599999999996
+			}
+		],
+		"properties": {
+			"label": "New polygon",
+			"color": ""
+		}
+	},
+	"center": {
+		"latitude": 39.360610,
+		"longitude":  -0.327631
+	},
+	"Name": "Parque de Bomberos de la Devesa del Saler"
+}
