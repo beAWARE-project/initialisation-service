@@ -1,12 +1,12 @@
 node ('beaware-jenkins-slave') {
     stage('Download Latest') {
-        git(url: 'https://github.com/beaware-project/initialisation-service.git', branch: 'master')
+        git(url: 'https://github.com/beaware-project/initialisation_service.git', branch: 'master')
         sh 'git submodule init'
         sh 'git submodule update'
     }
 
     stage ('Build docker image') {
-	    sh 'docker build -t beaware/initialisation-service:${BUILD_NUMBER} --pull=true .'
+	    sh 'docker build -t beaware/initialisation_service:${BUILD_NUMBER} --pull=true .'
     }
 
     stage ('Push docker image') {
