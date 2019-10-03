@@ -1,17 +1,17 @@
 node ('beaware-jenkins-slave') {
     stage('Download Latest') {
-        git(url: 'https://github.com/beaware-project/initialisation_service.git', branch: 'master')
+        git(url: 'https://github.com/beaware-project/initialisation-service.git', branch: 'master')
         sh 'git submodule init'
         sh 'git submodule update'
     }
 
     stage ('Build docker image') {
-	    sh 'docker build -t beaware/initialisation_service:${BUILD_NUMBER} --pull=true .'
+	    sh 'docker build -t beaware/initialisation-service:${BUILD_NUMBER} --pull=true .'
     }
 
     stage ('Push docker image') {
         withDockerRegistry([credentialsId: 'dockerhub-credentials']) {
-		sh 'docker push beaware/initialisation_service:${BUILD_NUMBER}'
+		sh 'docker push beaware/initialisation-service:${BUILD_NUMBER}'
         }
     }
 
@@ -23,6 +23,6 @@ node ('beaware-jenkins-slave') {
 
     stage ('Print-deploy logs') {
         sh 'sleep 60'
-        sh 'kubectl -n prod logs deploy/initialisation_service -c initialisation_service'
+        sh 'kubectl -n prod logs deploy/initialisation-service -c initialisation-service'
     }
 }

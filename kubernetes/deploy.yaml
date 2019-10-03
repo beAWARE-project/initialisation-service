@@ -2,13 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: initialisation_service
-  name: initialisation_service
+    app: initialisation-service
+  name: initialisation-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: initialisation_service
+      app: initialisation-service
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -18,12 +18,12 @@ spec:
   template:
     metadata:
       labels:
-        app: initialisation_service
+        app: initialisation-service
     spec:
       containers:
-      - image: beaware/initialisation_service:IMAGE_TAG
+      - image: beaware/initialisation-service:IMAGE_TAG
         imagePullPolicy: Always
-        name: initialisation_service
+        name: initialisation-service
         resources:
           requests:
             cpu: 200m

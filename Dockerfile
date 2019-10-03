@@ -2,12 +2,12 @@
 FROM python:3.7-slim
 
 COPY dummy_credentials/ /usr/src/dummy_credentials/
-COPY src/ /usr/src/initialisation_service/
+COPY src/ /usr/src/initialisation-service/
 
-COPY requirements.txt /usr/src/initialisation_service/
+COPY requirements.txt /usr/src/initialisation-service/
 
-# Set the working directory to /usr/src/initialisation_service/
-WORKDIR /usr/src/initialisation_service/
+# Set the working directory to /usr/src/initialisation-service/
+WORKDIR /usr/src/initialisation-service/
 
 # Install any needed packages specified in requirements.txt
 RUN pip3 install --upgrade pip 

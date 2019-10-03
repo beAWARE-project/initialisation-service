@@ -2,9 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: initialisation_service
-  name: initialisation_service
+    app: initialisation-service
+  name: initialisation-service
 spec:
   selector:
-    app: initialisation_service
+    app: initialisation-service
 
