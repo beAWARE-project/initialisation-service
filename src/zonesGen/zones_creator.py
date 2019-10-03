@@ -5,13 +5,14 @@ import os
 
 def generateTopic():
     owd = os.getcwd()
-    os.chdir('zonesGen/sample_json/')
+    producer = BusProducer()
 
+    os.chdir('zonesGen/sample_json/')
     with open('TOP106_Sample.json') as f:
         msg = json.load(f)
     f.close()
     dataStreamID = msg['body']['dataStreamID']
-    producer = BusProducer()
+
     polygons = ['polygon1.json','polygon2.json', 'polygon3.json', 'polygon4.json']
     iter = 0
     for jsonFile in polygons:
@@ -32,11 +33,12 @@ def generateTopic():
 
         msg['header']["sentUTC"] = str("{}Z".format((datetime.utcnow() - timedelta(hours=0)).replace(microsecond=0).isoformat()))
         msg['header']['msgIdentifier'] = msg['header']["sentUTC"]
-        print(msg)
+
+        print(json.dumps(msg))
         #with open('ZONE' + str(iter) + '.json', 'w') as outfile:
         #    outfile.write(msg)
         #outfile.close()
-        producer.send(msg["header"]["topicName"], msg)
+        producer.send(msg["header"]["topicName"], json.dumps(msg))
 
     os.chdir(owd)
     #print('round ended')
