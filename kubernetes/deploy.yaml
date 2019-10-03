@@ -18,12 +18,12 @@ spec:
   template:
     metadata:
       labels:
-        app: initialisation-service
+        app: initialisation_service
     spec:
       containers:
       - image: beaware/initialisation_service:IMAGE_TAG
         imagePullPolicy: Always
-        name: initialisation-service
+        name: initialisation_service
         resources:
           requests:
             cpu: 100m
