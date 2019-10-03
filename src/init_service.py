@@ -1,17 +1,15 @@
-#! python3
 import threading
 from bus.bus_consumer import BusConsumer
 
-
 class ListenerThread(threading.Thread):
-    def __init__(self, listen_to_topics):
+    def __init__(self, topics):
         threading.Thread.__init__(self)
 
-        self.listen_to_topics = listen_to_topics
+        self.topics = topics
         self.consumer = None
 
     def run(self):
-        print("Initiated listener on topics", self.listen_to_topics)
+        print("Initiated listener on topics", self.topics)
 
         # Create consumer object
         self.consumer = BusConsumer()
@@ -26,11 +24,11 @@ class ListenerThread(threading.Thread):
         return self.topics
 
 def runListenThread():
-	topics = [
+    topics = [
         'TOP111_ZONES_INITIALIZATION'
     ]
     # Create new threads
-    thread1 = ListenerThread(listen_to_topics=topics)
+    thread1 = ListenerThread(topics)
 
     # Start new Threads
     thread1.start()

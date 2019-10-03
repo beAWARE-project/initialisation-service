@@ -4,7 +4,8 @@ from datetime import datetime, timedelta
 import os
 
 def generateTopic():
-    os.chdir('../ZonesGenerator/sample_json')
+    owd = os.getcwd()
+    os.chdir('zonesGen/sample_json/')
 
     with open('TOP106_Sample.json') as f:
         msg = json.load(f)
@@ -35,7 +36,8 @@ def generateTopic():
         #with open('ZONE' + str(iter) + '.json', 'w') as outfile:
         #    outfile.write(msg)
         #outfile.close()
-        producer.send(msg["header"]["topicName"], msg)
+        #producer.send(msg["header"]["topicName"], msg)
 
-
+    os.chdir(owd)
+    #print('round ended')
 #generateTopic()

@@ -27,7 +27,7 @@ class LoadCredentials:
             cred['kafka_brokers_sasl'] = cred['kafka_brokers_sasl'].split(',')
         except:
             # If failed reading the env vars, then try to load the values from the local file (as was previously)
-            bus_cred_file = "bus_credentials.json"
+            bus_cred_file = "../dummy_credentials/bus_credentials.json"
             print("Loading values form file instead:" + bus_cred_file)
             with open(bus_cred_file) as f:
                 return json.load(f)

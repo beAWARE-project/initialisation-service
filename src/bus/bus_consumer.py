@@ -1,7 +1,9 @@
 from confluent_kafka import Consumer
+import bus.load_credentials
 import json
 import asyncio
-import sqlite3
+
+
 import zonesGen.zones_creator as znGen
 
 
@@ -11,7 +13,7 @@ class BusConsumer:
         # Pre-shared credentials
         # self.credentials = json.load(open('bus_credentials.json'))
 
-        self.credentials = load_credentials.LoadCredentials.load_bus_credentials()
+        self.credentials = bus.load_credentials.LoadCredentials.load_bus_credentials()
 
         # Construct required configuration
         self.configuration = {
