@@ -8,7 +8,7 @@ spec:
   selector:
     app: initialisation-service
   ports:
-    - name: http
+  - name: http
     port: 7855
     protocol: TCP
     targetPort: 2355
