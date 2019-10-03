@@ -23,7 +23,7 @@ spec:
       containers:
       - image: beaware/initialisation-service:IMAGE_TAG
         imagePullPolicy: Always
-        name: initialisation-service
+        name: media-hub
         ports:
         - containerPort: 2355
           name: http
