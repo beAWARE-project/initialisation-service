@@ -24,6 +24,10 @@ spec:
       - image: beaware/initialisation-service:IMAGE_TAG
         imagePullPolicy: Always
         name: initialisation-service
+        ports:
+        - containerPort: 2355
+          name: http
+          protocol: TCP
         resources:
           requests:
             cpu: 200m
