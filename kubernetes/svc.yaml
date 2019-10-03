@@ -11,4 +11,4 @@ spec:
     - name: http
     port: 7855
     protocol: TCP
-targetPort: 2355
+    targetPort: 2355
