@@ -36,7 +36,7 @@ def generateTopic():
         #with open('ZONE' + str(iter) + '.json', 'w') as outfile:
         #    outfile.write(msg)
         #outfile.close()
-        #producer.send(msg["header"]["topicName"], msg)
+        producer.send(msg["header"]["topicName"], msg)
 
     os.chdir(owd)
     #print('round ended')
