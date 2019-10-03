@@ -2,13 +2,13 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    app: initialisation-service
-  name: initialisation-service
+    app: initialisation_service
+  name: initialisation_service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: initialisation-service
+      app: initialisation_service
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -21,7 +21,7 @@ spec:
         app: initialisation-service
     spec:
       containers:
-      - image: beaware/initialisation-service:IMAGE_TAG
+      - image: beaware/initialisation_service:IMAGE_TAG
         imagePullPolicy: Always
         name: initialisation-service
         resources:
