@@ -11,7 +11,7 @@ node ('beaware-jenkins-slave') {
 
     stage ('Push docker image') {
         withDockerRegistry([credentialsId: 'dockerhub-credentials']) {
-		sh 'docker push beaware/initialisation-service:${BUILD_NUMBER}'
+		sh 'docker push beaware/initialisation_service:${BUILD_NUMBER}'
         }
     }
 
@@ -23,6 +23,6 @@ node ('beaware-jenkins-slave') {
 
     stage ('Print-deploy logs') {
         sh 'sleep 60'
-        sh 'kubectl -n prod logs deploy/initialisation-service -c initialisation-service'
+        sh 'kubectl -n prod logs deploy/initialisation_service -c initialisation_service'
     }
 }
