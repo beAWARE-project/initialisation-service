@@ -32,7 +32,8 @@ def generateTopic():
         msg['body']['dataStreamDescription'] = plgn['Name']
 
         msg['header']["sentUTC"] = str("{}Z".format((datetime.utcnow() - timedelta(hours=0)).replace(microsecond=0).isoformat()))
-        msg['header']['msgIdentifier'] = msg['header']["sentUTC"]
+        msg['header']['msgIdentifier'] = msg['body']['dataStreamName'] = 'ZONE' + str(iter).zfill(2) + '_' + \
+                                                                         msg['header']["sentUTC"]
 
         print(json.dumps(msg))
         #with open('ZONE' + str(iter) + '.json', 'w') as outfile:
